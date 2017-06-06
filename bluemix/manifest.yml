@@ -1,0 +1,12 @@
+applications:
+- name: fvn-duo
+  memory: 512M
+  instances: 1
+  host: fvn-duo
+  routes:
+  - route: https://fvn-duo-app.eu-gb.mybluemix.net
+  path: ../target/api-0.1.0.jar
+  services:
+  - mysql-fvn
+  env:
+    SPRING_PROFILES_DEFAULT: cloud
